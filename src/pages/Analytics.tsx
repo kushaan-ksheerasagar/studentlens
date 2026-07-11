@@ -49,18 +49,18 @@ export function Analytics() {
 
   return (
     <div className="space-y-6 pb-12">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <h1 className="text-5xl font-serif italic font-light tracking-tight">Analytics Overview</h1>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <h1 className="text-4xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">Analytics Overview</h1>
         <div className="flex items-center gap-4">
           <button 
             onClick={() => showToast("Report exported")}
-            className="px-6 h-10 border border-[#1A1A1A] dark:border-white text-[10px] uppercase font-bold tracking-widest hover:bg-[#1A1A1A] hover:text-white dark:hover:bg-white dark:hover:text-[#1A1A1A] transition-colors"
+            className="px-6 h-10 border border-slate-200 dark:border-slate-700 rounded-full text-sm font-bold text-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
           >
             Export PDF
           </button>
           <button 
             onClick={() => showToast("Report exported")}
-            className="px-8 h-10 bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] text-[10px] uppercase font-bold tracking-widest"
+            className="px-8 h-10 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full text-sm font-bold hover:bg-indigo-700 transition-colors shadow-sm"
           >
             Export Excel
           </button>
@@ -68,27 +68,30 @@ export function Analytics() {
       </div>
 
       {/* Institution Wide Report Card */}
-      <div className="bg-[#1A1A1A] text-[#FDFCFB] p-8 border-l-4 border-[#FF4D00]">
-        <div className="mb-6 pb-4 border-b border-[#333]">
-          <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Institution-Wide Report Card</span>
-          <h2 className="text-3xl font-serif italic font-light mt-2">Overall Health Overview</h2>
+      <div className="bg-gradient-to-br from-indigo-900 to-slate-900 text-white p-8 rounded-3xl shadow-lg border border-indigo-800 relative overflow-hidden mb-8">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
+        
+        <div className="relative z-10 mb-8 pb-6 border-b border-white/10">
+          <span className="text-xs uppercase tracking-widest font-bold text-indigo-300 block mb-2">Institution-Wide Report Card</span>
+          <h2 className="text-3xl font-serif font-bold text-white">Overall Health Overview</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <span className="text-[10px] font-mono opacity-50 block mb-2">01 / TOTAL ENROLLED</span>
-            <p className="text-4xl font-serif">12 <span className="text-sm font-sans font-normal opacity-50">students</span></p>
+            <span className="text-xs font-bold uppercase tracking-wider text-indigo-200/60 block mb-2">01 / TOTAL ENROLLED</span>
+            <p className="text-4xl font-bold">12 <span className="text-sm font-normal text-indigo-200">students</span></p>
           </div>
           <div>
-            <span className="text-[10px] font-mono opacity-50 block mb-2">02 / AVG ATTENDANCE</span>
-            <p className="text-4xl font-serif">88%</p>
+            <span className="text-xs font-bold uppercase tracking-wider text-indigo-200/60 block mb-2">02 / AVG ATTENDANCE</span>
+            <p className="text-4xl font-bold">88%</p>
           </div>
           <div>
-            <span className="text-[10px] font-mono opacity-50 block mb-2">03 / AVG PROGRESS</span>
-            <p className="text-4xl font-serif">76%</p>
+            <span className="text-xs font-bold uppercase tracking-wider text-indigo-200/60 block mb-2">03 / AVG PROGRESS</span>
+            <p className="text-4xl font-bold">76%</p>
           </div>
           <div>
-            <span className="text-[10px] font-mono opacity-50 text-[#FF4D00] block mb-2">04 / AT RISK FLAGGED</span>
-            <p className="text-4xl font-serif text-[#FF4D00]">3 <span className="text-sm font-sans font-normal opacity-50 text-[#FDFCFB]">students</span></p>
+            <span className="text-xs font-bold uppercase tracking-wider text-pink-400 block mb-2">04 / AT RISK FLAGGED</span>
+            <p className="text-4xl font-bold text-pink-400">3 <span className="text-sm font-normal text-pink-300">students</span></p>
           </div>
         </div>
       </div>
@@ -180,30 +183,30 @@ export function Analytics() {
         </div>
 
         {/* Teacher Workload */}
-        <div className="bg-white dark:bg-slate-800 p-8 border border-[#1A1A1A] dark:border-slate-700">
-          <div className="border-b border-[#1A1A1A] dark:border-slate-700 pb-4 mb-6">
-            <span className="text-[10px] uppercase tracking-widest font-bold block">Teacher Workload Dashboard</span>
+        <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800">
+          <div className="border-b border-slate-200 dark:border-slate-700 pb-4 mb-6">
+            <span className="text-sm font-bold block">Teacher Workload Dashboard</span>
           </div>
           <div className="grid grid-cols-2 gap-6">
-            <div className="border-l-2 border-[#1A1A1A] dark:border-slate-700 pl-4">
-              <span className="text-4xl font-serif italic text-slate-900 dark:text-white block">8</span>
-              <span className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-1 block">Classes / Wk</span>
+            <div className="border-l-2 border-indigo-200 dark:border-indigo-800 pl-4">
+              <span className="text-4xl font-serif font-bold text-slate-900 dark:text-white block">8</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1 block">Classes / Wk</span>
             </div>
-            <div className="border-l-2 border-[#1A1A1A] dark:border-slate-700 pl-4">
-              <span className="text-4xl font-serif italic text-slate-900 dark:text-white block">12</span>
-              <span className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-1 block">Students</span>
+            <div className="border-l-2 border-indigo-200 dark:border-indigo-800 pl-4">
+              <span className="text-4xl font-serif font-bold text-slate-900 dark:text-white block">12</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1 block">Students</span>
             </div>
-            <div className="border-l-2 border-[#FF4D00] pl-4">
-              <span className="text-4xl font-serif italic text-[#FF4D00] block">5</span>
-              <span className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-1 block">HW to Review</span>
+            <div className="border-l-2 border-pink-400 pl-4">
+              <span className="text-4xl font-serif font-bold text-pink-500 block">5</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-pink-400 mt-1 block">HW to Review</span>
             </div>
-            <div className="border-l-2 border-[#1A1A1A] dark:border-slate-700 pl-4">
-              <span className="text-4xl font-serif italic text-slate-900 dark:text-white block">~14</span>
-              <span className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-1 block">Hours / Wk</span>
+            <div className="border-l-2 border-indigo-200 dark:border-indigo-800 pl-4">
+              <span className="text-4xl font-serif font-bold text-slate-900 dark:text-white block">~14</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1 block">Hours / Wk</span>
             </div>
           </div>
           <div className="mt-8 pt-4 border-t border-slate-200 dark:border-slate-700">
-            <p className="text-sm text-slate-600 dark:text-slate-400 font-serif italic">
+            <p className="text-sm text-slate-600 dark:text-slate-400">
               Average prep time per class is currently running at <strong className="font-sans font-bold text-slate-900 dark:text-white">45 minutes</strong>.
             </p>
           </div>

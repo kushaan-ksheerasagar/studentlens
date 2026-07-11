@@ -14,8 +14,8 @@ export function Timetable() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-slate-900 dark:border-white mb-8">
-        <h1 className="text-5xl font-serif italic tracking-tight">Schedule</h1>
+      <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 mb-8">
+        <h1 className="text-4xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">Schedule</h1>
       </div>
 
       <div className="max-w-4xl space-y-4">
@@ -27,8 +27,8 @@ export function Timetable() {
             <div 
               key={cls.id} 
               className={cn(
-                "bg-white dark:bg-slate-800 rounded-xl shadow-sm border transition-all overflow-hidden",
-                isToday ? "border-indigo-500 dark:border-indigo-500/50 ring-1 ring-indigo-500/20" : "border-slate-200 dark:border-slate-700"
+                "bg-white dark:bg-slate-800 rounded-2xl shadow-sm border transition-all overflow-hidden",
+                isToday ? "border-indigo-200 dark:border-indigo-500/50 ring-2 ring-indigo-50 dark:ring-indigo-500/20" : "border-slate-100 dark:border-slate-700"
               )}
             >
               <div 

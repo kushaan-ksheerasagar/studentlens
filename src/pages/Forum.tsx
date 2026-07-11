@@ -15,8 +15,8 @@ export function Forum() {
 
   return (
     <div className="h-[calc(100vh-6rem)] flex flex-col space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-900 dark:border-white">
-        <h1 className="text-5xl font-serif italic tracking-tight">Forum</h1>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+        <h1 className="text-4xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">Forum</h1>
         
         <div className="relative w-full sm:w-96">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -24,29 +24,29 @@ export function Forum() {
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-10 py-2 border border-slate-200 dark:border-slate-700 rounded-lg leading-5 bg-white dark:bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm transition-colors"
+            className="block w-full pl-10 pr-10 py-3 border border-slate-100 dark:border-slate-700 rounded-full leading-5 bg-white dark:bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm transition-colors shadow-sm"
             placeholder="Semantic search across posts & resources..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           {searchQuery && (
-            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
               <Sparkles className="h-4 w-4 text-indigo-500 animate-pulse" />
             </div>
           )}
         </div>
       </div>
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex-1 flex flex-col overflow-hidden">
-        <div className="flex border-b border-slate-200 dark:border-slate-700 px-4 pt-2">
+      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex-1 flex flex-col overflow-hidden">
+        <div className="flex border-b border-slate-100 dark:border-slate-700 px-4 pt-2">
           {['feed', 'resources', 'chat'].map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab as any)}
               className={cn(
-                "px-4 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2",
+                "px-4 py-3 text-sm font-bold whitespace-nowrap transition-colors border-b-2",
                 activeTab === tab 
-                  ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400" 
+                  ? "border-indigo-500 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400" 
                   : "border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
               )}
             >

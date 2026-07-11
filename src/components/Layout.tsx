@@ -54,10 +54,12 @@ export function Layout({ children, currentView, navigate, onLogout }: LayoutProp
         "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 transform transition-transform duration-200 ease-in-out md:relative md:translate-x-0 flex flex-col",
         isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
       )}>
-        <div className="flex items-center justify-between h-16 px-4 border-b border-slate-200 dark:border-slate-700">
-          <div className="flex flex-col">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-50">Vol. 01</span>
-            <h1 className="text-xl font-serif italic font-light tracking-tight">STUDENTLENS</h1>
+        <div className="flex items-center justify-between h-20 px-6 border-b border-slate-100 dark:border-slate-700/50">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <BookOpen className="w-5 h-5" />
+            </div>
+            <h1 className="text-xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">StudentLens</h1>
           </div>
           <button className="md:hidden text-slate-500" onClick={() => setIsMobileMenuOpen(false)}>
             <X className="w-6 h-6" />
@@ -70,14 +72,19 @@ export function Layout({ children, currentView, navigate, onLogout }: LayoutProp
               key={item.id}
               onClick={() => { navigate(item.id as View); setIsMobileMenuOpen(false); }}
               className={cn(
-                "group flex flex-col items-start w-full px-3 py-4 border-b border-transparent transition-colors",
+                "group flex items-center gap-3 w-full px-4 py-3 rounded-xl transition-all duration-200 mb-1",
                 currentView === item.id || (currentView === 'StudentProfile' && item.id === 'Students')
-                  ? "border-slate-900 dark:border-white text-slate-900 dark:text-white"
-                  : "text-slate-700 hover:border-slate-900 dark:text-slate-300 dark:hover:border-white"
+                  ? "bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-medium"
+                  : "text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200"
               )}
             >
-              <span className="text-[10px] font-bold mb-1 opacity-40 tracking-widest">0{navItems.indexOf(item) + 1}</span>
-              <span className="text-lg font-serif italic">{item.label}</span>
+              <item.icon className={cn(
+                "w-5 h-5",
+                currentView === item.id || (currentView === 'StudentProfile' && item.id === 'Students')
+                  ? "text-indigo-600 dark:text-indigo-400"
+                  : "text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300"
+              )} />
+              <span className="text-[15px] font-sans">{item.label}</span>
             </button>
           ))}
         </nav>

@@ -52,14 +52,14 @@ export function AIAssistant() {
     <div className="h-[calc(100vh-6rem)] flex flex-col md:flex-row gap-6">
       
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
-        <div className="p-6 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 flex items-center gap-4">
-          <div className="w-12 h-12 border border-slate-900 dark:border-white flex items-center justify-center text-slate-900 dark:text-white">
+      <div className="flex-1 flex flex-col bg-white dark:bg-slate-800 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 overflow-hidden">
+        <div className="p-6 border-b border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 flex items-center gap-4">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
             <Sparkles className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="font-serif italic text-2xl tracking-tight text-slate-900 dark:text-white">AI Copilot</h2>
-            <p className="text-[10px] uppercase font-bold tracking-widest text-slate-500">Powered by STUDENTLENS Engine</p>
+            <h2 className="font-serif font-bold text-2xl tracking-tight text-slate-900 dark:text-white">AI Copilot</h2>
+            <p className="text-[10px] uppercase font-bold tracking-widest text-indigo-500">Powered by STUDENTLENS Engine</p>
           </div>
         </div>
         

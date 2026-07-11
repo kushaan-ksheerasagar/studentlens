@@ -43,19 +43,19 @@ export function StudentProfile({ student, navigate }: StudentProfileProps) {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center gap-6 pb-6 border-b border-slate-900 dark:border-white mb-8">
-        <button onClick={() => navigate('Students')} className="w-10 h-10 border border-slate-900 dark:border-white flex items-center justify-center hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-colors">
-          <ArrowLeft className="w-5 h-5" />
+      <div className="flex items-center gap-6 pb-6 border-b border-slate-100 dark:border-slate-800 mb-8">
+        <button onClick={() => navigate('Students')} className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+          <ArrowLeft className="w-5 h-5 text-slate-600 dark:text-slate-300" />
         </button>
         <div>
-          <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-1">Student Profile</span>
-          <h1 className="text-5xl font-serif italic tracking-tight">{student.name}</h1>
-          <p className="text-sm text-slate-500 mt-2 font-mono uppercase tracking-widest">{student.classGroup} • {student.location}</p>
+          <span className="text-sm font-bold text-indigo-500 uppercase tracking-widest block mb-1">Student Profile</span>
+          <h1 className="text-4xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">{student.name}</h1>
+          <p className="text-sm text-slate-500 mt-2 font-medium">{student.classGroup} • {student.location}</p>
         </div>
         <div className="ml-auto">
           <button 
             onClick={() => setShowReport(true)}
-            className="flex items-center gap-2 px-6 py-3 border border-slate-900 dark:border-white text-[10px] uppercase tracking-widest font-bold hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 rounded-full text-sm font-bold hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
           >
             <FileText className="w-4 h-4" />
             Parent Report

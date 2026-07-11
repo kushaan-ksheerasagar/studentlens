@@ -12,9 +12,9 @@ interface StudentsProps {
 export function Students({ navigate }: StudentsProps) {
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-slate-900 dark:border-white mb-8">
-        <h1 className="text-5xl font-serif italic tracking-tight">Student Roster</h1>
-        <span className="text-[10px] uppercase tracking-widest font-bold opacity-50">Total Enrolled: {STUDENTS.length}</span>
+      <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 mb-8">
+        <h1 className="text-4xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">Student Roster</h1>
+        <span className="text-sm uppercase tracking-widest font-bold text-slate-400">Total Enrolled: {STUDENTS.length}</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
@@ -22,7 +22,7 @@ export function Students({ navigate }: StudentsProps) {
           <div 
             key={student.id}
             onClick={() => navigate('StudentProfile', student)}
-            className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6 cursor-pointer hover:border-slate-900 dark:hover:border-white transition-all group flex flex-col"
+            className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-6 cursor-pointer hover:shadow-lg hover:border-indigo-100 dark:hover:border-indigo-500/50 transition-all group flex flex-col"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
