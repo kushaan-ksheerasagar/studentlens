@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #1A1A1A;
+  --color-accent: #FF4D00;
+
+  /* Editorial Theme Overrides */
+  --color-slate-50: #FDFCFB;
+  --color-slate-100: #F5F2ED;
+  --color-slate-200: #1A1A1A;
+  --color-slate-300: #333333;
+  --color-slate-700: #333333;
+  --color-slate-800: #1A1A1A;
+  --color-slate-900: #000000;
+  
+  --color-indigo-50: #F5F2ED;
+  --color-indigo-100: #EBEBEB;
+  --color-indigo-200: #1A1A1A;
+  --color-indigo-300: #FF4D00;
+  --color-indigo-400: #FF4D00;
+  --color-indigo-500: #1A1A1A;
+  --color-indigo-600: #1A1A1A;
+  --color-indigo-700: #000000;
+  --color-indigo-900: #1A1A1A;
+
+  --color-emerald-50: #FDFCFB;
+  --color-emerald-100: #F5F2ED;
+  --color-emerald-400: #1A1A1A;
+  --color-emerald-500: #1A1A1A;
+  --color-emerald-600: #1A1A1A;
+  --color-emerald-700: #1A1A1A;
+  --color-emerald-900: #1A1A1A;
+
+  --color-red-50: #FDFCFB;
+  --color-red-100: #F5F2ED;
+  --color-red-400: #FF4D00;
+  --color-red-500: #FF4D00;
+  --color-red-600: #FF4D00;
+  --color-red-700: #FF4D00;
+  --color-red-900: #1A1A1A;
+
+  --color-amber-50: #FDFCFB;
+  --color-amber-100: #F5F2ED;
+  --color-amber-400: #1A1A1A;
+  --color-amber-500: #1A1A1A;
+  --color-amber-600: #1A1A1A;
+  --color-amber-700: #1A1A1A;
+  --color-amber-900: #1A1A1A;
+  
+  --color-teal-50: #FDFCFB;
+  --color-teal-500: #1A1A1A;
+  --color-teal-600: #1A1A1A;
+  --color-teal-900: #1A1A1A;
+
+  --color-blue-50: #FDFCFB;
+  --color-blue-600: #1A1A1A;
+  --color-blue-900: #1A1A1A;
+
+  --radius-xl: 0px;
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-sm: 0px;
+  --radius: 0px;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-[#FDFCFB] text-[#1A1A1A] font-sans antialiased transition-colors duration-200;
+}
+
+.dark body {
+  @apply bg-[#1A1A1A] text-[#FDFCFB];
+}
