@@ -7,8 +7,64 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Outfit", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-  --color-primary: #8b5cf6;
-  --color-accent: #f472b6;
+  --color-white: #143245;
+  --color-black: #112B3C;
+  
+  --color-slate-50: #112B3C;
+  --color-slate-100: #143245;
+  --color-slate-200: #17394f;
+  --color-slate-300: #1a4159;
+  --color-slate-400: #1d4863;
+  --color-slate-500: #8EBD9D;
+  --color-slate-600: #9cc6a9;
+  --color-slate-700: #a9d0b6;
+  --color-slate-800: #b7d9c2;
+  --color-slate-900: #c4e3cf;
+  
+  --color-indigo-50: #112B3C;
+  --color-indigo-100: #143245;
+  --color-indigo-200: #17394f;
+  --color-indigo-300: #1a4159;
+  --color-indigo-400: #1d4863;
+  --color-indigo-500: #8EBD9D;
+  --color-indigo-600: #9cc6a9;
+  --color-indigo-700: #a9d0b6;
+  --color-indigo-800: #b7d9c2;
+  --color-indigo-900: #c4e3cf;
+
+  --color-emerald-50: #112B3C;
+  --color-emerald-100: #143245;
+  --color-emerald-200: #17394f;
+  --color-emerald-300: #1a4159;
+  --color-emerald-400: #1d4863;
+  --color-emerald-500: #8EBD9D;
+  --color-emerald-600: #9cc6a9;
+  --color-emerald-700: #a9d0b6;
+  --color-emerald-800: #b7d9c2;
+  --color-emerald-900: #c4e3cf;
+
+  /* Complementary Orange/Amber for highlights (complement of #112B3C) */
+  --color-amber-50: #3c2a11;
+  --color-amber-100: #453214;
+  --color-amber-200: #4f3917;
+  --color-amber-300: #59411a;
+  --color-amber-400: #63481d;
+  --color-amber-500: #bd9d8e;
+  --color-amber-600: #c6a99c;
+  --color-amber-700: #d0b6a9;
+  --color-amber-800: #d9c2b7;
+  --color-amber-900: #e3cfc4;
+
+  --color-pink-50: #112B3C;
+  --color-pink-100: #143245;
+  --color-pink-200: #17394f;
+  --color-pink-300: #1a4159;
+  --color-pink-400: #1d4863;
+  --color-pink-500: #8EBD9D;
+  --color-pink-600: #9cc6a9;
+  --color-pink-700: #a9d0b6;
+  --color-pink-800: #b7d9c2;
+  --color-pink-900: #c4e3cf;
 }
 
 html, body, #root {
@@ -16,9 +72,9 @@ html, body, #root {
 }
 
 body {
-  @apply bg-slate-50 text-slate-800 font-sans antialiased transition-colors duration-200;
+  @apply bg-slate-50 text-slate-500 font-sans antialiased transition-colors duration-200;
 }
 
 .dark body {
-  @apply bg-slate-900 text-slate-100;
+  @apply bg-slate-50 text-slate-500;
 }

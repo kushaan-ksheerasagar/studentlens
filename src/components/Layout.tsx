@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LayoutDashboard, Calendar, Users, BarChart2, MessageSquare, Sparkles, Bell, Search, Moon, Sun, LogOut, Menu, X, BookOpen } from 'lucide-react';
+import { LayoutDashboard, Calendar, Users, BarChart2, MessageSquare, Sparkles, Bell, Search, Moon, Sun, LogOut, Menu, X } from 'lucide-react';
 import { TUTOR, NOTIFICATIONS } from '../data';
 import { cn } from '../lib/utils';
 
@@ -55,11 +55,14 @@ export function Layout({ children, currentView, navigate, onLogout }: LayoutProp
         isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex items-center justify-between h-20 px-6 border-b border-slate-100 dark:border-slate-700/50">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
-              <BookOpen className="w-5 h-5" />
-            </div>
-            <h1 className="text-xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">StudentLens</h1>
+          <div 
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => {
+              navigate('Dashboard');
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            <img src="/logo.png" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
           </div>
           <button className="md:hidden text-slate-500" onClick={() => setIsMobileMenuOpen(false)}>
             <X className="w-6 h-6" />
