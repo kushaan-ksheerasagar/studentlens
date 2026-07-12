@@ -7,6 +7,7 @@ import { Timetable } from './pages/Timetable';
 import { Analytics } from './pages/Analytics';
 import { Forum } from './pages/Forum';
 import { AIAssistant } from './pages/AIAssistant';
+import { Hotlist } from './pages/Hotlist';
 import { Landing } from './pages/Landing';
 import { Student } from './types';
 import { BookOpen } from 'lucide-react';
@@ -32,6 +33,7 @@ export default function App() {
       {currentView === 'Students' && <Students navigate={navigate} />}
       {currentView === 'StudentProfile' && selectedStudent && <StudentProfile student={selectedStudent} navigate={navigate} />}
       {currentView === 'Analytics' && <Analytics />}
+      {currentView === 'Hotlist' && <Hotlist navigate={navigate} />}
       {currentView === 'Forum' && <Forum />}
       {currentView === 'AIAssistant' && <AIAssistant />}
     </Layout>

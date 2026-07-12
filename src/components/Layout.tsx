@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { LayoutDashboard, Calendar, Users, BarChart2, MessageSquare, Sparkles, Bell, Search, Moon, Sun, LogOut, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Calendar, Users, BarChart2, MessageSquare, Sparkles, Bell, Search, Moon, Sun, LogOut, Menu, X, Flame } from 'lucide-react';
 import { TUTOR, NOTIFICATIONS } from '../data';
 import { cn } from '../lib/utils';
 
-export type View = 'Dashboard' | 'Timetable' | 'Students' | 'StudentProfile' | 'Analytics' | 'Forum' | 'AIAssistant';
+export type View = 'Dashboard' | 'Timetable' | 'Students' | 'StudentProfile' | 'Analytics' | 'Forum' | 'AIAssistant' | 'Hotlist';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,6 +27,7 @@ export function Layout({ children, currentView, navigate, onLogout }: LayoutProp
     { id: 'Dashboard', icon: LayoutDashboard, label: 'Dashboard' },
     { id: 'Timetable', icon: Calendar, label: 'Timetable' },
     { id: 'Students', icon: Users, label: 'Students' },
+    { id: 'Hotlist', icon: Flame, label: 'Hotlist' },
     { id: 'Analytics', icon: BarChart2, label: 'Analytics' },
     { id: 'Forum', icon: MessageSquare, label: 'Forum' },
     { id: 'AIAssistant', icon: Sparkles, label: 'AI Assistant' },
@@ -62,7 +63,7 @@ export function Layout({ children, currentView, navigate, onLogout }: LayoutProp
               setIsMobileMenuOpen(false);
             }}
           >
-            <img src="/logo.png" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
+            <img src="/logo.jpeg" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
           </div>
           <button className="md:hidden text-slate-500" onClick={() => setIsMobileMenuOpen(false)}>
             <X className="w-6 h-6" />

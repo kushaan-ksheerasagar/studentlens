@@ -27,13 +27,12 @@ export function Landing({ onLogin }: LandingProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <img src="/logo.png" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
+              <img src="/logo.jpeg" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Home</a>
               <a href="#features" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Features</a>
               <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
-              <a href="#contact" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Connect with us</a>
             </div>
             <div className="flex items-center gap-4">
               <button 
@@ -214,54 +213,39 @@ export function Landing({ onLogin }: LandingProps) {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-slate-100 text-slate-900 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Connect with us</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-12">Have questions or want to learn more? We'd love to hear from you.</p>
+      {/* Footer / Tailbar */}
+      <footer className="bg-slate-950 text-slate-300 py-16 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/logo.jpeg" alt="StudentLens Logo" className="w-10 h-10 object-contain rounded-lg bg-white p-1" />
+              <span className="font-serif text-2xl font-bold tracking-tight text-white">StudentLens</span>
+            </div>
+            <p className="text-slate-400 max-w-sm mb-6">The complete toolkit for modern tutors to manage students, track progress, and grow their teaching business.</p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center p-6 bg-white rounded-3xl shadow-sm border border-slate-200">
-              <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Email</h3>
-              <p className="text-slate-600">hello@studentlens.com</p>
-            </div>
-            
-            <div className="flex flex-col items-center p-6 bg-white rounded-3xl shadow-sm border border-slate-200">
-              <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Phone</h3>
-              <p className="text-slate-600">+1 (555) 123-4567</p>
-            </div>
-            
-            <div className="flex flex-col items-center p-6 bg-white rounded-3xl shadow-sm border border-slate-200">
-              <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Office</h3>
-              <p className="text-slate-600">123 Education Lane<br/>EdTech City, EC 12345</p>
-            </div>
+          <div>
+            <h4 className="text-white font-bold mb-4">Connect with us</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                <span className="text-sm">hello@studentlens.com</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                <span className="text-sm">+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span className="text-sm">123 Education Lane, EdTech City</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-
-      {/* Footer CTA */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-900/40 to-pink-900/40 opacity-50"></div>
-        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">Ready to transform your teaching?</h2>
-          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Join thousands of tutors who are saving hours every week with StudentLens.</p>
-          <button 
-            onClick={() => setShowLogin(true)}
-            className="bg-white text-slate-900 px-10 py-4 rounded-full text-lg font-bold hover:bg-indigo-50 transition-all shadow-xl hover:-translate-y-1"
-          >
-            Get Started Now
-          </button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+          <p>© {new Date().getFullYear()} StudentLens. All rights reserved.</p>
         </div>
-      </section>
+      </footer>
 
       {/* Login Modal */}
       {showLogin && (
@@ -276,7 +260,7 @@ export function Landing({ onLogin }: LandingProps) {
             
             <div className="p-10 border-b border-slate-100 bg-slate-50 text-center">
               <div className="w-16 h-16 mx-auto mb-4">
-                <img src="/logo.png" alt="StudentLens Logo" className="w-16 h-16 object-contain" />
+                <img src="/logo.jpeg" alt="StudentLens Logo" className="w-16 h-16 object-contain" />
               </div>
               <h2 className="text-3xl font-serif font-bold text-slate-900 mb-2">Welcome back</h2>
               <p className="text-sm text-slate-500">Enter your details to access your dashboard.</p>
