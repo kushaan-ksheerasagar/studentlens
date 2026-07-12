@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { LayoutDashboard, Calendar, Users, BarChart2, MessageSquare, Sparkles, Bell, Search, Moon, Sun, LogOut, Menu, X, Flame } from 'lucide-react';
 import { TUTOR, NOTIFICATIONS } from '../data';
 import { cn } from '../lib/utils';
+import { Logo } from './Logo';
 
 export type View = 'Dashboard' | 'Timetable' | 'Students' | 'StudentProfile' | 'Analytics' | 'Forum' | 'AIAssistant' | 'Hotlist';
 
@@ -63,7 +64,10 @@ export function Layout({ children, currentView, navigate, onLogout }: LayoutProp
               setIsMobileMenuOpen(false);
             }}
           >
-            <img src="/logo.jpeg" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
+            <div className="w-10 h-10 rounded-2xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <Logo className="w-6 h-6" />
+            </div>
+            <h1 className="text-xl font-serif font-bold tracking-tight text-slate-900 dark:text-white">StudentLens</h1>
           </div>
           <button className="md:hidden text-slate-500" onClick={() => setIsMobileMenuOpen(false)}>
             <X className="w-6 h-6" />

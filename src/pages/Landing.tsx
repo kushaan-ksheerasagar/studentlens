@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Sparkles, Target, Users, ArrowRight, PlayCircle, CheckCircle2 } from 'lucide-react';
 
+import { Logo } from '../components/Logo';
+
 interface LandingProps {
   onLogin: () => void;
 }
@@ -27,7 +29,8 @@ export function Landing({ onLogin }: LandingProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <img src="/logo.jpeg" alt="StudentLens Logo" className="w-12 h-12 object-contain" />
+              <Logo className="w-10 h-10 text-indigo-600" />
+              <span className="font-serif text-2xl font-bold tracking-tight text-slate-900">StudentLens</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Home</a>
@@ -35,6 +38,12 @@ export function Landing({ onLogin }: LandingProps) {
               <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
             </div>
             <div className="flex items-center gap-4">
+              <button 
+                onClick={onLogin}
+                className="hidden md:block text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors"
+              >
+                Continue as Guest
+              </button>
               <button 
                 onClick={() => setShowLogin(true)}
                 className="hidden md:block text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors"
@@ -79,8 +88,11 @@ export function Landing({ onLogin }: LandingProps) {
             >
               Start for free <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="w-full sm:w-auto bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full text-base font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
-              <PlayCircle className="w-5 h-5 text-indigo-500" /> Watch Demo
+            <button 
+              onClick={onLogin}
+              className="w-full sm:w-auto bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full text-base font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+            >
+              <PlayCircle className="w-5 h-5 text-indigo-500" /> Try Demo / Guest
             </button>
           </div>
           
@@ -218,7 +230,7 @@ export function Landing({ onLogin }: LandingProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/logo.jpeg" alt="StudentLens Logo" className="w-10 h-10 object-contain rounded-lg bg-white p-1" />
+              <Logo className="w-10 h-10 text-white" />
               <span className="font-serif text-2xl font-bold tracking-tight text-white">StudentLens</span>
             </div>
             <p className="text-slate-400 max-w-sm mb-6">The complete toolkit for modern tutors to manage students, track progress, and grow their teaching business.</p>
@@ -259,8 +271,8 @@ export function Landing({ onLogin }: LandingProps) {
             </button>
             
             <div className="p-10 border-b border-slate-100 bg-slate-50 text-center">
-              <div className="w-16 h-16 mx-auto mb-4">
-                <img src="/logo.jpeg" alt="StudentLens Logo" className="w-16 h-16 object-contain" />
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-2xl">
+                <Logo className="w-10 h-10" />
               </div>
               <h2 className="text-3xl font-serif font-bold text-slate-900 mb-2">Welcome back</h2>
               <p className="text-sm text-slate-500">Enter your details to access your dashboard.</p>

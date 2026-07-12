@@ -74,7 +74,7 @@ export function Analytics() {
         
         <div className="relative z-10 mb-8 pb-6 border-b border-white/10">
           <span className="text-xs uppercase tracking-widest font-bold text-indigo-300 block mb-2">Institution-Wide Report Card</span>
-          <h2 className="text-3xl font-serif font-bold text-white">Overall Health Overview</h2>
+          <h2 className="text-3xl font-serif font-bold text-white">Overall Review</h2>
         </div>
         <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
